@@ -3,7 +3,6 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 
 KEY = base64.b64decode("vy+UJgcL1nNPrUJvGKRC+xHy0v6UCrgmajlNUKtYb8Y=")
-
 def aes_decrypt(data, key):
     raw_data = base64.b64decode(data)
     iv, encrypted = raw_data[:16], raw_data[16:]
